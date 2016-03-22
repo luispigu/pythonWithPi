@@ -2,6 +2,7 @@ import random
 
 words = ['chicken', 'dog', 'cat', 'mouse', 'frog']
 lives_remaining = 14
+guess_letters = ''
 
 
 def play():
@@ -29,7 +30,15 @@ def get_guess(word):
 
 
 def print_word_with_blanks(word):
-    print('not done yet')
+    display_word = ''
+    for letter in word:
+        if guess_letters.find(letter) > -1:
+            # 글자를 찾음
+            display_word = display_word + letter
+        else:
+            # 글자를 찾을 수 없음
+            display_word = display_word + '-'
+    print(display_word)
 
 
 def process_guess(guess, word):
