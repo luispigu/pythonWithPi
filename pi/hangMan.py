@@ -1,6 +1,7 @@
 import random
 
 words = ['chicken', 'dog', 'cat', 'mouse', 'frog']
+lives_remaining = 14
 
 
 def pick_a_word():
@@ -28,3 +29,5 @@ def process_guess(guess, word):
     global lives_remaining
     lives_remaining = lives_remaining - 1
     return False
+
+play()
